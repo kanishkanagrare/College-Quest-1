@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+body {font-family: "Lato", sans-serif;}
+
+/* Style the tab */
+.tab {
+  float: left;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  width: 30%;
+  height: 300px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: rgb(111, 207, 119);
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: rgb(137, 204, 243);
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  border: 1px solid rgb(226, 114, 202);
+  width: 70%;
+  border-left: none;
+  height: 300px;
+}
+</style>
+</head>
+<body>
+
+<h2>College Quest</h2>
+<p>Click on the buttons to see colleges</p>
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'Arts')" id="defaultOpen">Arts</button>
+  <button class="tablinks" onclick="openCity(event, 'Commerce')">Commerce</button>
+  <button class="tablinks" onclick="openCity(event, 'Science')">Science</button>
+  <button class="tablinks" onclick="openCity(event, 'Engineering')">Engineering</button>
+  <button class="tablinks" onclick="openCity(event, 'ITI')">Industrial Training Colleges</button>
+  <button class="tablinks" onclick="openCity(event, 'NTD')">Non Technical Diplomas</button>
+</div>
+
+<div id="Arts" class="tabcontent">
+  <h3>Arts</h3>
+  <h4>Colleges for Arts in Bombay :-</h4>
+  <P><H4><A href="http://jjiaa.org/home.htm">Sir J.J Institute of Applied Arts </A></H4></P>
+  <P><H4><A href="https://sophiacollegemumbai.com/">Sophia College </A></H4></P>
+  <P><H4><A href="https://www.elphinstone.ac.in/">Elphinstone College </A></H4></P>
+  <P><H4><A href="https://mu.ac.in/">University Of Mumbai </A></H4></P>
+
+
+  <P><H4><A href="moreA.html"> more... </A></H4></P>
+</div>
+
+<div id="Commerce" class="tabcontent">
+  <h3>Commerce</h3>
+  <p>Colleges for Commerce in Bombay.</p> 
+  <h2>Coming soon...</h2>
+</div>
+
+<div id="Science" class="tabcontent">
+  <h3>Science</h3>
+  <p>Colleges for Science in Bombay.</p>
+  <h2>Coming soon...</h2>
+</div>
+
+<div id="Engineering" class="tabcontent">
+    <h3>Engineering</h3>
+    <p>Colleges for Engineering in Bombay.</p>
+    <h2>Coming soon...</h2>
+</div>
+
+<div id="ITI" class="tabcontent">
+    <h3>ITI</h3>
+    <p>Colleges for ITI in Bombay.</p>
+    <h2>Coming soon...</h2>
+</div>
+
+<div id="NTD" class="tabcontent">
+    <h3>NTD</h3>
+    <p>Colleges for Non Technical Diplomas in Bombay.</p>
+    <h2>Coming soon...</h2>
+</div>
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html> 
